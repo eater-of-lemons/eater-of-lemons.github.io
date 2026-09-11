@@ -3,236 +3,216 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nisan Harmanci — quantitative developer building research, market, and data systems.">
-  <meta name="theme-color" content="#101711">
-  <meta property="og:title" content="Nisan Harmanci — Quantitative Developer">
-  <meta property="og:description" content="A portfolio of quantitative research tools, market systems, and technical notes.">
+  <meta name="description" content="nisan harmanci — quant developer, code tinkerer, lemon eater.">
+  <meta name="theme-color" content="#f8f0d8">
+  <meta property="og:title" content="nisan harmanci — quant developer">
+  <meta property="og:description" content="code, data, markets, and other little puzzles.">
   <meta property="og:type" content="website">
-  <title>Nisan Harmanci — Quantitative Developer</title>
+  <title>nisan harmanci — quant dev-ish</title>
   <link rel="icon" href="./media/icon.png" type="image/png">
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#content">skip to the interesting bit</a>
 
-  <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Nisan Harmanci, home">
-      <span class="wordmark-mark" aria-hidden="true">nh</span>
-      <span>Nisan Harmanci</span>
-    </a>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <a class="identity" href="#panel-hello" data-panel-link="hello" aria-label="nisan harmanci, home">
+        <img src="./media/icon.png" width="48" height="48" alt="">
+        <span>
+          <strong>nisan harmanci</strong>
+          <small>quant dev-ish</small>
+        </span>
+      </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="#notes">Notes</a>
-    </nav>
+      <p class="tiny-intro">i make computers do maths.<br>sometimes on purpose.</p>
 
-    <a class="button button-small" href="./media/nisan-harmanci.pdf" target="_blank" rel="noreferrer">
-      Résumé <span aria-hidden="true">↗</span>
-    </a>
-  </header>
-
-  <main id="main-content">
-    <section class="hero section" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Quantitative developer</p>
-        <h1>Building reliable systems for <em>research, markets</em> and data.</h1>
-        <p class="hero-intro">
-          I’m Nisan, a developer interested in the point where software engineering,
-          quantitative research, and financial markets meet.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="https://github.com/eater-of-lemons" target="_blank" rel="noreferrer">
-            GitHub <span aria-hidden="true">↗</span>
-          </a>
+      <nav class="tab-nav" aria-label="pick a section">
+        <div class="tab-list" role="tablist" aria-orientation="vertical">
+          <button class="tab-button" id="tab-hello" type="button" role="tab" aria-selected="true" aria-controls="panel-hello" data-panel="hello">
+            <span aria-hidden="true">✦</span> hello
+          </button>
+          <button class="tab-button" id="tab-about" type="button" role="tab" aria-selected="false" aria-controls="panel-about" data-panel="about" tabindex="-1">
+            <span aria-hidden="true">☺</span> tiny bio
+          </button>
+          <button class="tab-button" id="tab-projects" type="button" role="tab" aria-selected="false" aria-controls="panel-projects" data-panel="projects" tabindex="-1">
+            <span aria-hidden="true">⌁</span> stuff i make
+          </button>
+          <button class="tab-button" id="tab-tools" type="button" role="tab" aria-selected="false" aria-controls="panel-tools" data-panel="tools" tabindex="-1">
+            <span aria-hidden="true">⌘</span> things i use
+          </button>
+          <button class="tab-button" id="tab-notes" type="button" role="tab" aria-selected="false" aria-controls="panel-notes" data-panel="notes" tabindex="-1">
+            <span aria-hidden="true">✎</span> brain crumbs
+          </button>
+          <button class="tab-button" id="tab-contact" type="button" role="tab" aria-selected="false" aria-controls="panel-contact" data-panel="contact" tabindex="-1">
+            <span aria-hidden="true">↗</span> say hi
+          </button>
         </div>
+      </nav>
+
+      <div class="sidebar-links">
+        <a href="https://github.com/eater-of-lemons" target="_blank" rel="noreferrer">github ↗</a>
+        <a href="./media/nisan-harmanci.pdf" target="_blank" rel="noreferrer">cv.pdf ↗</a>
       </div>
+    </aside>
 
-      <aside class="terminal" aria-label="Areas of focus">
-        <div class="terminal-bar">
-          <span></span><span></span><span></span>
-          <p>research.log</p>
+    <main class="content" id="content" tabindex="-1">
+      <section class="panel panel-hello" id="panel-hello" role="tabpanel" aria-labelledby="tab-hello" data-panel-content="hello">
+        <div class="panel-copy">
+          <p class="kicker"><span></span> currently: poking at data</p>
+          <h1>hi, i’m nisan.<br>i build things with <mark>code + numbers.</mark></h1>
+          <p class="lead">mostly interested in markets, research tools, and making messy data behave. this is my tiny corner of the internet.</p>
+          <div class="button-row">
+            <button class="scribble-button" type="button" data-go-to="projects">see my stuff <span aria-hidden="true">→</span></button>
+            <a class="plain-link" href="./media/nisan-harmanci.pdf" target="_blank" rel="noreferrer">peek at my cv</a>
+          </div>
         </div>
-        <div class="terminal-body">
-          <p><span class="terminal-muted">01</span> market_data <span class="terminal-value">clean + observable</span></p>
-          <p><span class="terminal-muted">02</span> research <span class="terminal-value">reproducible</span></p>
-          <p><span class="terminal-muted">03</span> execution <span class="terminal-value">tested + resilient</span></p>
-          <p><span class="terminal-muted">04</span> risk <span class="terminal-value">measured</span></p>
-          <p class="terminal-cursor"><span aria-hidden="true">›</span> always_learning<span class="cursor" aria-hidden="true"></span></p>
+        <div class="lemon-scene" aria-hidden="true">
+          <span class="doodle doodle-one">⋆</span>
+          <span class="doodle doodle-two">+ + +</span>
+          <div class="lemon-card">
+            <img src="./media/icon.png" width="190" height="190" alt="">
+            <p>hello, world!<br><span>(but zesty)</span></p>
+          </div>
+          <span class="tape"></span>
         </div>
-      </aside>
-    </section>
+      </section>
 
-    <section class="section about" id="about">
-      <div class="section-heading">
-        <p class="section-number">01 / About</p>
-        <h2>Engineering discipline for quantitative problems.</h2>
-      </div>
-      <div class="about-content">
-        <p class="large-copy">
-          I care about turning uncertain ideas into systems that are explicit,
-          testable, and useful—from the first notebook to production.
-        </p>
-        <div class="principles">
-          <article>
-            <span>01</span>
+      <section class="panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about" data-panel-content="about" hidden>
+        <div class="panel-header">
+          <p class="kicker">tiny bio / no suit required</p>
+          <h2>person who likes<br><mark>hard little puzzles.</mark></h2>
+        </div>
+        <div class="split-grid">
+          <div class="big-note">
+            <p>i’m a developer hanging out where software, maths, and markets overlap.</p>
+            <p>i like clear ideas, boringly reliable code, and experiments you can actually reproduce.</p>
+          </div>
+          <div class="mini-list" aria-label="things i care about">
+            <p><span>01</span> make it correct</p>
+            <p><span>02</span> measure the weird bits</p>
+            <p><span>03</span> explain it simply</p>
+            <p><span>04</span> keep learning, obviously</p>
+          </div>
+        </div>
+        <p class="footnote">* still figuring lots of it out. that is the fun part.</p>
+      </section>
+
+      <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" data-panel-content="projects" hidden>
+        <div class="panel-header panel-header-row">
+          <div>
+            <p class="kicker">stuff i make</p>
+            <h2>the project shelf.</h2>
+          </div>
+          <span class="wonky-stamp">dusting<br>in progress</span>
+        </div>
+        <!-- swap these honest placeholders for real work when it is ready -->
+        <div class="project-list">
+          <article class="project-item">
+            <span class="project-number">01</span>
             <div>
-              <h3>Correct by construction</h3>
-              <p>Clear assumptions, typed interfaces, and tests around the decisions that matter.</p>
+              <p class="project-label">reserved spot</p>
+              <h3>put the coolest thing here</h3>
+              <p>what it does, why it exists, and the mildly cursed bit that was fun to solve.</p>
             </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="project-item">
+            <span class="project-number">02</span>
+            <div>
+              <p class="project-label">also reserved</p>
+              <h3>another good rabbit hole</h3>
+              <p>maybe research, maybe market data, maybe a tiny tool with an unreasonable amount of care.</p>
+            </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="project-item project-item-small">
+            <span class="project-number">03</span>
+            <div>
+              <p class="project-label">room for one more</p>
+              <h3>small but mighty</h3>
+            </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" data-panel-content="tools" hidden>
+        <div class="panel-header">
+          <p class="kicker">things i poke computers with</p>
+          <h2>my little <mark>toolbox.</mark></h2>
+        </div>
+        <div class="tool-groups">
+          <article>
+            <span class="tool-icon" aria-hidden="true">{ }</span>
+            <h3>code</h3>
+            <ul class="chip-list">
+              <li>python</li><li>c++</li><li>sql</li><li>typescript</li>
+            </ul>
           </article>
           <article>
-            <span>02</span>
-            <div>
-              <h3>Measure before tuning</h3>
-              <p>Profile the system, validate the data, and optimize the actual bottleneck.</p>
-            </div>
+            <span class="tool-icon" aria-hidden="true">∑</span>
+            <h3>number stuff</h3>
+            <ul class="chip-list">
+              <li>time series</li><li>statistics</li><li>backtests</li><li>risk</li>
+            </ul>
           </article>
           <article>
-            <span>03</span>
-            <div>
-              <h3>Research that travels</h3>
-              <p>Reproducible workflows that can move cleanly from exploration to deployment.</p>
-            </div>
+            <span class="tool-icon" aria-hidden="true">⚙</span>
+            <h3>keeping it alive</h3>
+            <ul class="chip-list">
+              <li>linux</li><li>git</li><li>docker</li><li>tests</li>
+            </ul>
           </article>
         </div>
-      </div>
-    </section>
+        <p class="footnote">not a keyword soup. just the things i enjoy using.</p>
+      </section>
 
-    <section class="section work" id="work">
-      <div class="section-heading section-heading-row">
-        <div>
-          <p class="section-number">02 / Selected work</p>
-          <h2>Projects &amp; case studies.</h2>
+      <section class="panel" id="panel-notes" role="tabpanel" aria-labelledby="tab-notes" data-panel-content="notes" hidden>
+        <div class="panel-header">
+          <p class="kicker">brain crumbs</p>
+          <h2>notes from the <mark>rabbit hole.</mark></h2>
         </div>
-        <p class="section-note">A home for work worth explaining.</p>
-      </div>
-
-      <!-- Replace these scaffold cards with real projects as they are ready. -->
-      <div class="project-grid">
-        <article class="project-card project-card-featured">
-          <div class="project-topline">
-            <p>Project 01</p>
-            <span>Research infrastructure</span>
-          </div>
-          <div class="project-card-content">
-            <p class="project-status">Case study placeholder</p>
-            <h3>Your flagship research platform</h3>
-            <p>Describe the problem, your design decisions, the data involved, and the measurable result.</p>
-            <ul class="tag-list" aria-label="Suggested technologies">
-              <li>Python</li>
-              <li>Time series</li>
-              <li>Testing</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-topline">
-            <p>Project 02</p>
-            <span>Market systems</span>
-          </div>
-          <div class="project-card-content">
-            <p class="project-status">Case study placeholder</p>
-            <h3>A data or execution system</h3>
-            <p>Show how you handled reliability, latency, observability, and failure modes.</p>
-            <ul class="tag-list" aria-label="Suggested technologies">
-              <li>C++</li>
-              <li>Streaming</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-topline">
-            <p>Project 03</p>
-            <span>Risk &amp; analytics</span>
-          </div>
-          <div class="project-card-content">
-            <p class="project-status">Case study placeholder</p>
-            <h3>An analytical deep dive</h3>
-            <p>Explain the model, validation process, limitations, and what you learned.</p>
-            <ul class="tag-list" aria-label="Suggested technologies">
-              <li>Statistics</li>
-              <li>SQL</li>
-              <li>Visualization</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section stack" id="stack">
-      <div class="section-heading">
-        <p class="section-number">03 / Toolkit</p>
-        <h2>Tools for the full research lifecycle.</h2>
-      </div>
-      <div class="stack-grid">
-        <article>
-          <p class="stack-label">Languages</p>
-          <p>Python</p><p>C++</p><p>SQL</p><p>TypeScript</p>
-        </article>
-        <article>
-          <p class="stack-label">Quantitative</p>
-          <p>Time-series analysis</p><p>Statistics</p><p>Backtesting</p><p>Risk modelling</p>
-        </article>
-        <article>
-          <p class="stack-label">Engineering</p>
-          <p>Data pipelines</p><p>Distributed systems</p><p>Testing</p><p>Observability</p>
-        </article>
-        <article>
-          <p class="stack-label">Environment</p>
-          <p>Linux</p><p>Git</p><p>Docker</p><p>Cloud</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section notes" id="notes">
-      <div class="section-heading section-heading-row">
-        <div>
-          <p class="section-number">04 / Notes</p>
-          <h2>Thinking in public.</h2>
+        <div class="note-stack">
+          <article>
+            <span>soon-ish</span>
+            <div>
+              <h3>first technical note</h3>
+              <p>on research, code, or whatever i got stuck thinking about.</p>
+            </div>
+            <span aria-hidden="true">✎</span>
+          </article>
+          <article>
+            <span>also soon</span>
+            <div>
+              <h3>second technical note</h3>
+              <p>another idea, once it has stopped being a pile of arrows.</p>
+            </div>
+            <span aria-hidden="true">✎</span>
+          </article>
         </div>
-        <p class="section-note">Short writing on engineering and markets.</p>
-      </div>
-      <!-- Link each row to a post when writing is published. -->
-      <div class="notes-list">
-        <article class="note-row">
-          <time datetime="2026">Soon</time>
-          <h3>First technical note</h3>
-          <p>Research workflow</p>
-          <span aria-hidden="true">↗</span>
-        </article>
-        <article class="note-row">
-          <time datetime="2026">Soon</time>
-          <h3>Second technical note</h3>
-          <p>Systems engineering</p>
-          <span aria-hidden="true">↗</span>
-        </article>
-      </div>
-    </section>
+        <div class="empty-note">nothing published yet. the thoughts are still marinating.</div>
+      </section>
 
-    <section class="contact section" id="contact">
-      <img src="./media/icon.png" width="64" height="64" alt="Pixel art lemon">
-      <p class="section-number">05 / Contact</p>
-      <h2>Let’s solve something difficult.</h2>
-      <p>For opportunities, collaborations, or a good technical conversation, find me on GitHub.</p>
-      <div class="hero-actions contact-actions">
-        <a class="button button-light" href="https://github.com/eater-of-lemons" target="_blank" rel="noreferrer">
-          Get in touch <span aria-hidden="true">↗</span>
-        </a>
-        <a class="text-link text-link-light" href="./media/nisan-harmanci.pdf" target="_blank" rel="noreferrer">View résumé</a>
-      </div>
-    </section>
-  </main>
+      <section class="panel panel-contact" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" data-panel-content="contact" hidden>
+        <div class="contact-card">
+          <img src="./media/icon.png" width="92" height="92" alt="happy pixel lemon">
+          <p class="kicker">say hi</p>
+          <h2>found something interesting?</h2>
+          <p>send it my way. code, data, markets, strange bugs, excellent lemons — all welcome.</p>
+          <div class="button-row button-row-center">
+            <a class="scribble-button" href="https://github.com/eater-of-lemons" target="_blank" rel="noreferrer">find me on github <span aria-hidden="true">↗</span></a>
+            <a class="plain-link" href="./media/nisan-harmanci.pdf" target="_blank" rel="noreferrer">or read the serious pdf</a>
+          </div>
+        </div>
+        <p class="contact-footer">made with html, css, js &amp; a concerning commitment to yellow.</p>
+      </section>
 
-  <footer class="site-footer">
-    <p>© 2026 Nisan Harmanci</p>
-    <p>Built simply. Hosted on GitHub Pages.</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+      <noscript>
+        <p class="noscript-note">javascript is off, so the little tabs cannot tab. the links on the left still get you to github and my cv.</p>
+      </noscript>
+    </main>
+  </div>
 </body>
 </html>
